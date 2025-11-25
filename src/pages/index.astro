@@ -1,11 +1,89 @@
----
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+import Layout from '../layouts/Layout.astro';
+import Sponsors from '../components/Sponsors.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<main>
+		<section class="hero">
+			<img src="./public/images/sponsors/logoKMAKUS-1.webp" alt="Kmakus Logo" class="logo"/>
+			<h1>Aprende a Programar en Astro… y Ayuda a KMAKUS a Cambiar Vidas</h1>
+			<h2>Una iniciativa solidaria donde la tecnología crea hogares</h2>
+			<p>Vamos a construir una web en unos <strong>directos</strong>, paso a paso, enseñando a programar con Astro, 
+				uno de los frameworks más modernos y rápidos del momento.
+				Pero este proyecto no se queda solo en código: cada sesión será también una oportunidad <strong>para apoyar la labor
+				 de KMAKUS</strong>, un centro de adopciones que trabaja para que cientos de animales encuentren un hogar..</p>
+			<br>
+			<a href="https://analaizer.digital" class="cta">Únete Ahora</a>
+			<br>
+			<h2>¿Qué es KMAKUS?</h2>
+			<p>KMAKUS nació como protectora de animales y hoy es un centro de Adopciones que acompaña a cada mascota durante todo el proceso:
+				desde el rescate, recuperación y cuidado, hasta encontrar a la familia ideal.
+				Su misión es clara: darles la vida que merecen y unirlos con quienes la cambiarán para siempre.</p>
+			<p>Puedes conocer más sobre su labor en su web oficial: <a href="https://kmakus.com/" target="_blank"></a>kmakus.com</p>
+
+		</section>
+
+		<Sponsors />
+		<section>
+			<a href="tel:+34722616444">Teléfono: +34722616444</a>
+			<a href="https://wa.me/+34722616150">WhatsApp: +34722616150</a>
+		</section>
+	</main>
 </Layout>
+
+<style>
+	main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
+		text-align: center;
+	}
+
+	.hero {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		flex-grow: 1;
+	}
+
+	.logo {
+		width: 300px;
+		margin-bottom: 2rem;
+	}
+
+	h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		font-size: 1.25rem;
+		margin-bottom: 2rem;
+	}
+
+	a {
+		text-decoration: none;
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		color: var(--kmakus-green)
+	}
+
+	.cta {
+		background-color: var(--kmakus-green);
+		color: var(--black);
+		padding: 1rem 2rem;
+		border-radius: 5px;
+		text-decoration: none;
+		font-weight: bold;
+		transition: background-color 0.3s ease;
+	}
+
+	.cta:hover {
+		background-color: #6799b2;
+	}
+</style>
