@@ -1,0 +1,58 @@
+---
+import '/src/styles/global.css'
+---
+<section>
+    <div>
+        <h2>Cuenta atrás</h2>
+        <div id="countdown">
+            <div class="time">
+                <span id="days">00</span>
+                <p>Days</p>
+            </div>
+            <div class="time">
+                <span id="hours">00</span>
+                <p>Hours</p>
+            </div>
+            <div>
+                <span>:</span>
+            </div>
+            <dir class="time">
+                <span id="minuts">00</span>
+                <p>Minuts</p>
+            </dir>
+            <div class="time">
+                <span id="seconds">00</span>
+                <p>Seconds</p>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/scripts/script.js" />
+</section>
+
+<style>
+    #countdown{
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        gap: 1rem;
+        border: 3px solid var(--kmakus-green);
+        padding: 1.5rem;
+        border-radius: 5px;
+        font-family: 'Digital Numbers';
+    }
+
+    .time{
+        border: 1px solid var(--kmakus-green);
+        padding: 1rem;
+        border-radius: 5px;
+        }
+
+    p {
+        color: var(--kmakus-green);
+    }
+
+    #days, #hours, #minuts, #seconds {
+        font-size: 3rem;
+        color: greenyellow;
+    }
+</style>
